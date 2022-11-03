@@ -7,7 +7,7 @@ const DecreaseButton = () => {
         <Context.Consumer>
             {([number, setNumber]) => (
                 <button
-                    id={styles.decrease}
+                    id={styles.decreaseButton}
                     onClick={() => setNumber(number - 1)}
                 >
                     Decrease

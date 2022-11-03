@@ -1,3 +1,7 @@
 #decreaseButton {
-    background-color: #fff;
+    background-color: #0d0022;
+    color: white;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 7px;
 }
