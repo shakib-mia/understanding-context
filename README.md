@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[See the Website](https://github.com/facebook/create-react-app).
+[See the Website](https://context-counter.netlify.app/).
 
 ## Available Scripts
 
