@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Container from "./components/Container/Container";
+import Context from "./Contexts/Context";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/**
+ *  Export context globally:
+ *	export const Context = React.createContext();
+ *  Wrap the all things in <Context.Provider></Context.Provider>
+ *  Pass the value that should be passed <Context.Provider value={value}></Context.Provider>
+ *  Wrap the child that will receive the data with <Context.Consumer>{value => {jsx}}</Context.Consumer>
+ *
+ */
+
+export default function App() {
+    const [number, setNumber] = useState(0);
+    const data = [number, setNumber];
+
+    return (
+        <div className="App">
+            <Context.Provider value={data}>
+                <Container />
+            </Context.Provider>
+        </div>
+    );
 }
-
-export default App;
