@@ -14,11 +14,10 @@ import Context from "./Contexts/Context";
 
 export default function App() {
     const [number, setNumber] = useState(0);
-    const data = [number, setNumber];
 
     return (
         <div className="App">
-            <Context.Provider value={data}>
+            <Context.Provider value={[number, setNumber]}>
                 <Container />
             </Context.Provider>
         </div>
